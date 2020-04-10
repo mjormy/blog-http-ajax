@@ -13,6 +13,7 @@ class NewPost extends Component {
     }
 
     componentDidMount(){
+        //this.props.history.replace('/posts')
         console.log(this.props);
     }
 
@@ -26,7 +27,8 @@ class NewPost extends Component {
             post)
             .then(response => {
                 console.log(response);
-                this.setState({submitted: true});
+                this.props.history.push('/posts');
+                //this.setState({submitted: true});
             });
     }
 
